@@ -13,7 +13,7 @@
 <body>
 
 <div id="grandpa">
-<a href="" id="">
+<a href="" id=""></a>
 </div>
 
 <div id="store">
@@ -32,15 +32,15 @@
 
 <div id="food">
 <button onclick="" style="background: url()"></button>
-<button onclick="" id="">ConsumeItem</button>
+<button onclick="consumeFood()" id="">ConsumeItem</button>
 </div>
 
 <div id="magazines">
-<button onclick="" id="">ConsumeItem</button>
+<button onclick="consumeMagazines()" id="">ConsumeItem</button>
 </div>
 
 <div id="cane">
-<button onclick="" id="">ConsumeItem</button>
+<button onclick="consumeCane()" id="">ConsumeItem</button>
 </div>
 
 </div>
@@ -48,9 +48,68 @@
 
 <script>
 
+var food = {
+  dessert: [
+    "cheesecake",
+    "churro",
+    "ice cream"
+    ];
+  meal: [
+    "hamburger",
+    "hot dog",
+    "spaghetti"
+    ];
+  snack: [
+    "doritos",
+    "cheetos",
+    "cookies"
+    ];
+}
 
+var magazines = {
+  finance: [
+    "stock market",
+    "bank account",
+    "how to save at 69"
+    ];
+  entertainment: [
+    "sports",
+    "movies",
+    "celebrities"
+    ];
+}:
 
+var cane = {
+  wooden: [
+    "oak",
+    "spruce",
+    "koa"
+    ];
+  plastic: [
+    "foldable",
+    "umbrella",
+    ];
+};
+function consumeFood() {
+  var randType = Math.floor(Math.random(food.length));
+  var randChoice = Math.floor(Math.random(food[randType].length));
+  //do something that takes item or gives item
+  
+}
 
+function consumeMagazines() {
+  var randType = Math.floor(Math.random(magazines.length));
+  var randChoice = Math.floor(Math.random(magazines[randType].length));
+  //do something that takes item or gives item
+  
+}
+
+function consumeCane() {
+  var randType = Math.floor(Math.random(cane.length));
+  var randChoice = Math.floor(Math.random(cane[randType].length));
+  //do something that takes item or gives item
+  
+}
 </script>
 
 </body>
