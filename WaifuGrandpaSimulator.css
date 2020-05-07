@@ -7,21 +7,43 @@
     height: 100%;
     width:25%;
     border: solid;
+    font-size: 70px;
+    text-align: center;
 }
 #Inventory {
     height: 100%;
     width:25%;
     border: solid;
+    font-size: 70px;
+    text-align: center;
 }
 #Happiness {
     height: 100%;
     width:25%;
     border: solid;
 }
+#GrandpaHappiness {
+    float: left;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    font-size: 25px;
+    text-align: center;
+}
+#PlayerHappiness {
+    float: right;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    font-size: 25px;
+    text-align: center;
+}
 #NextTurn {
     height: 100%;
     width:25%;
     border: solid;
+    font-size: 70px;
+    text-align: center;
 }
 #MainBox {
     height: 80%;
@@ -29,8 +51,4 @@
     background-image: url('GrandpaImage.png');
     background-repeat: no-repeat;
     background-size: cover;
-}
-p {
-    font-size: 70px;
-    text-align: center;
 }
