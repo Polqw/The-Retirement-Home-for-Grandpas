@@ -1,5 +1,7 @@
 var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
 var count=100;
+var GrandpaHappiness = 100;
+var PlayerHappiness = 100;
 
 var food = {
   dessert: [
@@ -92,4 +94,11 @@ function happyCounter()
 
 
 }
-
+function GrandpaHappinessScore() {
+    document.getElementById("GrandpaHappinessScore").innerHTML = GrandpaHappiness;
+}
+function PlayerHappinessScore() {
+    document.getElementById("PlayerHappinessScore").innerHTML = PlayerHappiness;
+}
+window.onload = GrandpaHappinessScore();
+window.onload = PlayerHappinessScore();
