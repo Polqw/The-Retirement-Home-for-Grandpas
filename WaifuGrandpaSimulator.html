@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <link href="WaifuGrandpaSimulator.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="Container">
+            <!-- Store Section Starts -->
+            <div id="StoreContainer">
+                <div id="StoreTop">
+                    Store
+                </div>
+                <div id="StoreBottom">
+                    <!-- Canes -->
+                    <div id="StoreItemOne" class="StoreItems">
+                        <div class="StoreBottomTop">
+                            Cane
+                        </div>
+                        <div class="StoreBottomBottom">
+                            <button onclick="BigCaneBuy()" id="BigCane">$3 Big Cane</button>
+                            <button onclick="MediumCaneBuy()" id="MediumCane">$2 Medium Cane</button>
+                            <button onclick="SmallCaneBuy()" id="SmallCane">$1 Small Cane</button>
+                        </div>
+                    </div>
+                    <!-- Magazines -->
+                    <div id="StoreItemTwo" class="StoreItems">
+                        <div class="StoreBottomTop">
+                            Magazines
+                        </div>
+                        <div class="StoreBottomBottom">
+                            <button onclick="BigMagazineBuy()" id="BigMagazine">$3 Big Magazine</button>
+                            <button onclick="MediumMagazineBuy()" id="MediumMagazine">$2 Medium Magazine</button>
+                            <button onclick="SmallMagazineBuy()" id="SmallMagazine">$1 Small Magazine</button>
+                        </div> 
+                    </div>
+                    <!-- Food -->
+                    <div id="StoreItemThree" class="StoreItems">
+                        <div class="StoreBottomTop">
+                            Food here
+                        </div>  
+                        <div class="StoreBottomBottom">
+                            <button onclick="BigFoodBuy()" id="BigFood">$3 Big Foods</button>
+                            <button onclick="MediumFoodBuy()" id="MediumFood">$2 Medium Foods</button>
+                            <button onclick="SmallFoodBuy()" id="LittleFood">$1 Small Foods</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Store Section Ends -->
+            </div>
+            <div id="Inventory">
+                <div id="InventoryTop">
+                    Inventory
+                </div>
+                <ol id="InventoryItems">
+                </ol>
+            </div>
+            <div id="Happiness">
+                <div id ="GrandpaHappiness">
+                    <p>Grandpa Happiness</p>
+                    <h1 id="GrandpaHappinessScore"></h1>
+                </div>
+                <div id ="PlayerBalanceBox">
+                    <p>Player Balance</p>
+                    <h1 id="PlayerBalance"></h1>
+                </div>
+            </div>
+            <div id="NextTurn">
+                <p>Next Turn</p>
+            </div>
+        </div>
+        <div id="MainBox"></div>
+        <script src="WaifuGrandpaSimulator.js"></script>
+    </body>
+</html>
