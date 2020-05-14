@@ -3,28 +3,27 @@
         <link href="WaifuGrandpaSimulator.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <div id="Container">
-            <div id="Store">
-                <p>Store</p>
-            </div>
-            <div id="Inventory">
-                <p>Inventory</p>
-            </div>
-            <div id="Happiness">
-                <div id ="GrandpaHappiness">
-                    <p>Grandpa Happiness</p>
-                    <h1 id="GrandpaHappinessScore"></h1>
-                </div>
-                <div id ="PlayerHappiness">
-                    <p>Player Happiness</p>
-                    <h1 id="PlayerHappinessScore"></h1>
-                </div>
-            </div>
-            <div id="NextTurn">
-                <p>Next Turn</p>
-            </div>
-        </div>
-        <div id="MainBox"></div>
-        <script src="WaifuGrandpaSimulator.js"></script>
+      <div id="Container">
+           <div class="button">
+              <button onclick="consumeCane()">Cane</button>
+          </div>
+          <div class="button">
+          		<button onclick="consumeMagazines()">Magazines</button>
+          </div>
+          <div class="button">
+          	<button onclick="consumeFood()">Food here</button>
+          </div>
+          <div id="Inventory">
+               <p>Inventory</p>
+              <ol id="InventoryItems"></ol>
+          </div>
+          <div id="Happiness">
+              <p id="Counter"></p>
+              <h1 id="GrandpaHappinessScore"></h1>
+          </div>
+    </div>
+    <div id="MainBox"></div>
+    <script src="WaifuGrandpaSimulator.js"></script>
+    
     </body>
 </html>
