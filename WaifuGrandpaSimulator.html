@@ -1,13 +1,17 @@
 <html>
     <head>
         <link href="WaifuGrandpaSimulator.css" rel="stylesheet" type="text/css">
+        <script src="p5.min.js"></script>
     </head>
     <body>
         <div id="Container">
-            <!-- Store Section Starts -->
+            <!-- Store Section Begins -->
             <div id="StoreContainer">
                 <div id="StoreTop">
-                    Store
+                    <div id="StoreTopleft">Store</div>
+                    <div id="StoreTopRight">
+                        <button onclick="ReRollStore()" id="ReRollButton">ReRoll Store for 1 coin</button>
+                    </div>
                 </div>
                 <div id="StoreBottom">
                     <!-- Canes -->
@@ -38,20 +42,19 @@
                             Food here
                         </div>  
                         <div class="StoreBottomBottom">
-                            <button onclick="BigFoodBuy()" id="BigFood">$3 Big Foods</button>
-                            <button onclick="MediumFoodBuy()" id="MediumFood">$2 Medium Foods</button>
-                            <button onclick="SmallFoodBuy()" id="LittleFood">$1 Small Foods</button>
+                            <button onclick="BigFoodBuy()" id="BigFoods">$3 Big Foods</button>
+                            <button onclick="MediumFoodBuy()" id="MediumFoods">$2 Medium Foods</button>
+                            <button onclick="SmallFoodBuy()" id="SmallFoods">$1 Small Foods</button>
                         </div>
                     </div>
                 </div>
-                <!-- Store Section Ends -->
             </div>
+            <!-- Inventory Section Begins -->
             <div id="Inventory">
                 <div id="InventoryTop">
                     Inventory
                 </div>
-                <ol id="InventoryItems">
-                </ol>
+                <ol id="InventoryItems"></ol>
             </div>
             <div id="Happiness">
                 <div id ="GrandpaHappiness">
@@ -63,11 +66,47 @@
                     <h1 id="PlayerBalance"></h1>
                 </div>
             </div>
+            <!-- Next-Turn Section Begins -->
             <div id="NextTurn">
-                <p>Next Turn</p>
+                <div id="DayNumber"></div>
+                    <button onclick ="NextDay()" id="NextTurnButton">Next Day</button>
             </div>
         </div>
-        <div id="MainBox"></div>
+        <div id="MainBox">
+            <div id ="GrandpasRequestsBox">
+                <div id="GrandpasRequestsBoxTop">
+                    Grandpas Requests
+                </div>
+                <div id="GrandpasRequestsBoxBottom">
+                    <ol id="RequestsBox"></ol>
+                    <div id="GrandpasSubmissionBox">
+                        <div id="GrandpaSumbmission">Submit items to grandpa by clicking number corresponding to inventory slot
+                        </div>
+                    </div>
+                    <div id="SubmissionBoxes">
+                        <button onclick = "SubmissionOne()" id="SubmissionBoxOne">1</button>
+                        <button onclick = "SubmissionTwo()" id="SubmissionBoxOne">2</button>
+                        <button onclick = "SubmissionThree()" id="SubmissionBoxOne">3</button>
+                        <button onclick = "SubmissionFour()" id="SubmissionBoxOne">4</button>
+                        <button onclick = "SubmissionFive()" id="SubmissionBoxOne">5</button>
+                    </div>    
+                </div>
+            </div>
+            <div id ="YourJobBox">
+            <div id="YourJobBoxTop">
+                Your Job
+            </div>
+            <div id="YourJobBoxBottom">
+                <div id="QuestionBox">
+                    <div id="QuestionCategory"></div>
+                    <div id="TheQuestion"></div>
+                </div>
+                <div id="AnswerBox"><div id="AnswerHider">
+                    <input type="text" id="Answer">
+                    <button onclick= "AnswerSubmit()" id="AnswerSubmit">Click to submit answer</button>
+                </div></div>
+            </div>
+        </div>
         <script src="WaifuGrandpaSimulator.js"></script>
     </body>
 </html>
