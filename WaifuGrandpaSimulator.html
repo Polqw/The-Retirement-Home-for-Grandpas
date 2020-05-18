@@ -1,7 +1,6 @@
 <html>
     <head>
         <link href="WaifuGrandpaSimulator.css" rel="stylesheet" type="text/css">
-        <script src="p5.min.js"></script>
     </head>
     <body>
         <div id="Container">
@@ -10,50 +9,42 @@
                 <div id="StoreTop">
                     <div id="StoreTopleft">Store</div>
                     <div id="StoreTopRight">
-                        <button onclick="ReRollStore()" id="ReRollButton">ReRoll Store for 1 coin</button>
+                        <button onclick="ReRollStore()" id="ReRollButton" class="button">ReRoll Store for 1 coin</button>
                     </div>
                 </div>
                 <div id="StoreBottom">
-                    <!-- Canes -->
-                    <div id="StoreItemOne" class="StoreItems">
-                        <div class="StoreBottomTop">
-                            Cane
-                        </div>
-                        <div class="StoreBottomBottom">
-                            <button onclick="BigCaneBuy()" id="BigCane">$3 Big Cane</button>
-                            <button onclick="MediumCaneBuy()" id="MediumCane">$2 Medium Cane</button>
-                            <button onclick="SmallCaneBuy()" id="SmallCane">$1 Small Cane</button>
-                        </div>
+                <!-- Canes -->
+                <div id="StoreItemOne" class="StoreItems">
+                    <div class="StoreBottomTop">Cane</div>
+                    <div class="StoreBottomBottom">
+                        <button onclick="BigCaneBuy()" id="BigCane" class="button">$3 Big Cane</button>
+                        <button onclick="MediumCaneBuy()" id="MediumCane" class="button">$2 Medium Cane</button>
+                        <button onclick="SmallCaneBuy()" id="SmallCane" class="button">$1 Small Cane</button>
                     </div>
-                    <!-- Magazines -->
-                    <div id="StoreItemTwo" class="StoreItems">
-                        <div class="StoreBottomTop">
-                            Magazines
-                        </div>
-                        <div class="StoreBottomBottom">
-                            <button onclick="BigMagazineBuy()" id="BigMagazine">$3 Big Magazine</button>
-                            <button onclick="MediumMagazineBuy()" id="MediumMagazine">$2 Medium Magazine</button>
-                            <button onclick="SmallMagazineBuy()" id="SmallMagazine">$1 Small Magazine</button>
-                        </div> 
+                </div>
+                <!-- Magazines -->
+                <div id="StoreItemTwo" class="StoreItems">
+                    <div class="StoreBottomTop">Magazines</div>
+                    <div class="StoreBottomBottom">
+                        <button onclick="BigMagazineBuy()" id="BigMagazine" class="button">$3 Big Magazine</button>
+                        <button onclick="MediumMagazineBuy()" id="MediumMagazine" class="button">$2 Medium Magazine</button>
+                        <button onclick="SmallMagazineBuy()" id="SmallMagazine" class="button">$1 Small Magazine</button>
+                    </div> 
+                </div>
+                <!-- Food -->
+                <div id="StoreItemThree" class="StoreItems">
+                    <div class="StoreBottomTop">Food here</div>  
+                    <div class="StoreBottomBottom">
+                        <button onclick="BigFoodBuy()" id="BigFoods" class="button">$3 Big Foods</button>
+                        <button onclick="MediumFoodBuy()" id="MediumFoods" class="button">$2 Medium Foods</button>
+                        <button onclick="SmallFoodBuy()" id="SmallFoods" class="button">$1 Small Foods</button>
                     </div>
-                    <!-- Food -->
-                    <div id="StoreItemThree" class="StoreItems">
-                        <div class="StoreBottomTop">
-                            Food here
-                        </div>  
-                        <div class="StoreBottomBottom">
-                            <button onclick="BigFoodBuy()" id="BigFoods">$3 Big Foods</button>
-                            <button onclick="MediumFoodBuy()" id="MediumFoods">$2 Medium Foods</button>
-                            <button onclick="SmallFoodBuy()" id="SmallFoods">$1 Small Foods</button>
-                        </div>
-                    </div>
+                </div>
                 </div>
             </div>
             <!-- Inventory Section Begins -->
             <div id="Inventory">
-                <div id="InventoryTop">
-                    Inventory
-                </div>
+                <div id="InventoryTop">Inventory</div>
                 <ol id="InventoryItems"></ol>
             </div>
             <div id="Happiness">
@@ -69,7 +60,7 @@
             <!-- Next-Turn Section Begins -->
             <div id="NextTurn">
                 <div id="DayNumber"></div>
-                    <button onclick ="NextDay()" id="NextTurnButton">Next Day</button>
+                    <button onclick ="NextDay()" id="NextTurnButton" class="button">Next Day</button>
             </div>
         </div>
         <div id="MainBox">
@@ -80,16 +71,15 @@
                 <div id="GrandpasRequestsBoxBottom">
                     <ol id="RequestsBox"></ol>
                     <div id="GrandpasSubmissionBox">
-                        <div id="GrandpaSumbmission">Submit items to grandpa by clicking number corresponding to inventory slot
-                        </div>
+                        <div id="GrandpaSumbmission">Submit items to grandpa by clicking number corresponding to inventory slot</div>
                     </div>
                     <div id="SubmissionBoxes">
-                        <button onclick = "SubmissionOne()" id="SubmissionBoxOne">1</button>
-                        <button onclick = "SubmissionTwo()" id="SubmissionBoxOne">2</button>
-                        <button onclick = "SubmissionThree()" id="SubmissionBoxOne">3</button>
-                        <button onclick = "SubmissionFour()" id="SubmissionBoxOne">4</button>
-                        <button onclick = "SubmissionFive()" id="SubmissionBoxOne">5</button>
-                    </div>    
+                        <button onclick = "SubmissionOne()" id="SubmissionBoxOne" class="button">1</button>
+                        <button onclick = "SubmissionTwo()" id="SubmissionBoxTwo" class="button">2</button>
+                        <button onclick = "SubmissionThree()" id="SubmissionBoxThree" class="button">3</button>
+                        <button onclick = "SubmissionFour()" id="SubmissionBoxFour" class="button">4</button>
+                        <button onclick = "SubmissionFive()" id="SubmissionBoxFive" class="button">5</button>
+                    </div>   
                 </div>
             </div>
             <div id ="YourJobBox">
@@ -103,10 +93,11 @@
                 </div>
                 <div id="AnswerBox"><div id="AnswerHider">
                     <input type="text" id="Answer">
-                    <button onclick= "AnswerSubmit()" id="AnswerSubmit">Click to submit answer</button>
+                    <button onclick= "AnswerSubmit()" id="AnswerSubmit" class="button">Click to submit answer</button>
                 </div></div>
             </div>
-        </div>
-        <script src="WaifuGrandpaSimulator.js"></script>
+            </div>
+    </div>
+    <script src="WaifuGrandpaSimulator.js"></script>
     </body>
 </html>
